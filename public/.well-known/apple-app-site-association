@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "AXRNMW2Q4G.com.revive.ease",
+        "paths": [ "/scan-clinic/*"]
+      }
+    ]
+  },
+  "webcredentials": {
+          "apps": ["AXRNMW2Q4G.com.revive.ease"]
+      }
+}

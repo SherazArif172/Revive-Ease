@@ -1,0 +1,93 @@
+// Outcome "Score Chart" popup — Figma node 118:17158 (frame "More info")
+.offcanvas.score-chart-sheet {
+  width: 680px !important;
+  max-width: 100vw;
+  border: none;
+  border-top-left-radius: 20px;
+  background: #fff;
+  font-family: Roboto, sans-serif;
+
+  .sc-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px 30px;
+  }
+
+  .sc-handle {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 8px;
+    border-radius: 24px;
+    background: #d6d8e7;
+  }
+
+  .sc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sc-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #14142b;
+  }
+
+  .sc-close {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      top: -8px;
+      left: -16px;
+      width: 72px;
+      height: 72px;
+      max-width: none;
+    }
+  }
+
+  .sc-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 20px;
+  }
+
+  .sc-subtitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .sc-chart {
+    height: 313px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+
+    .recharts-cartesian-axis-tick-value {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #484848;
+    }
+  }
+
+  .sc-empty {
+    font-size: 14px;
+    color: #585858;
+  }
+}

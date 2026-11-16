@@ -1,0 +1,93 @@
+// Confirm / success popups — Figma nodes 118:16253, 118:16260, 118:15306, 118:16265
+.rv-confirm-popup {
+  .modal-content {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .modal-dialog {
+    max-width: 441px;
+  }
+
+  .rv-confirm-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 16px;
+    background: #f6f5f4;
+    filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.12));
+  }
+
+  .rv-confirm-text {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: #585858;
+  }
+
+  &.rv-confirm-popup--success .rv-confirm-text {
+    text-align: center;
+  }
+
+  .rv-confirm-actions {
+    display: flex;
+    gap: 24px;
+  }
+
+  &.rv-confirm-popup--success .rv-confirm-actions {
+    justify-content: center;
+  }
+
+  .rv-confirm-btn {
+    flex: 1 0 0;
+    min-width: 0;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 8px rgba(3, 87, 113, 0.16));
+  }
+
+  &.rv-confirm-popup--success .rv-confirm-btn {
+    flex: 0 0 165px;
+  }
+
+  // Outline button (Cancel / Close)
+  .rv-confirm-btn--outline {
+    background: #f6f5f4;
+    font-weight: 500;
+    color: #080d1c;
+    border: 0.5px solid #04470c;
+  }
+
+  // Filled button (Yes)
+  .rv-confirm-btn--fill {
+    border: none;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  // Red variant — Flag
+  &.rv-confirm-popup--danger .rv-confirm-btn--fill {
+    background: #c91111;
+  }
+
+  // Orange variant — Ready for Billing
+  &.rv-confirm-popup--orange {
+    .rv-confirm-btn--outline {
+      background: #fff;
+      color: #f88200;
+      border-color: #f88200;
+    }
+
+    .rv-confirm-btn--fill {
+      background: #f88200;
+    }
+  }
+}

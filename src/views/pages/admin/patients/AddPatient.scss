@@ -1,0 +1,245 @@
+// Add New Patient — values taken from Figma node 118:9519
+.offcanvas.add-patient-sheet {
+  height: auto !important;
+  max-height: 95vh;
+  border: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: auto;
+
+  .ap-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px 48px;
+  }
+
+  .ap-handle {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 8px;
+    border-radius: 24px;
+    background: #d6d8e7;
+  }
+
+  .ap-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  .ap-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #14142b;
+  }
+
+  .ap-close {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    // Figma svg is 72x72 and includes the drop shadow around the 40px circle.
+    img {
+      position: absolute;
+      top: -8px;
+      left: -16px;
+      width: 72px;
+      height: 72px;
+      max-width: none;
+    }
+  }
+
+  .ap-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ap-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .ap-field {
+    flex: 1 0 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ap-label {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #121f2c;
+
+    .ap-req {
+      font-size: 12px;
+      font-weight: 300;
+      margin-left: 4px;
+    }
+  }
+
+  .ap-input {
+    width: 100%;
+    height: 50px;
+    padding: 12px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #121f2c;
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      border-color: #027fa3;
+    }
+  }
+
+  select.ap-input {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 38px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px 18px;
+    cursor: pointer;
+  }
+
+  .ap-error {
+    margin: -4px 0 0;
+    font-size: 12px;
+    color: #dc3545;
+  }
+
+  .ap-actions {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .ap-cancel {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #f88200;
+    align-self: center;
+  }
+
+  .ap-submit {
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #f88200;
+    filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.08));
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+
+  // Keep the whole form visible without a vertical scrollbar on shorter screens.
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-height: 900px) {
+    .ap-inner {
+      gap: 6px;
+      padding-bottom: 24px;
+    }
+
+    .ap-head {
+      padding: 8px 0;
+    }
+
+    .ap-form {
+      gap: 12px;
+    }
+
+    .ap-field {
+      gap: 6px;
+    }
+
+    .ap-label {
+      line-height: 20px;
+    }
+
+    .ap-input {
+      height: 44px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .ap-submit {
+      padding: 12px 16px;
+    }
+  }
+
+  @media (max-height: 720px) {
+    .ap-inner {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .ap-handle {
+      top: 12px;
+    }
+
+    .ap-form {
+      gap: 8px;
+    }
+
+    .ap-field {
+      gap: 4px;
+    }
+
+    .ap-input {
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ap-inner {
+      padding: 20px 16px 32px;
+    }
+
+    .ap-row {
+      flex-direction: column;
+    }
+
+    .ap-field {
+      width: 100%;
+    }
+  }
+}

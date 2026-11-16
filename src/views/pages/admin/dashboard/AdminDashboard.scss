@@ -1,0 +1,256 @@
+// Admin Dashboard — values taken from Figma node 118:10002 / 118:10039
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: "Montserrat", sans-serif;
+
+  .ad-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  // ---------- header (title + search + filters) ----------
+  .ad-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .ad-header-actions {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .ad-search {
+    width: 321px;
+    max-width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fff;
+    border-radius: 8px;
+    filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.08));
+
+    input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #121f2c;
+
+      &::placeholder {
+        color: #a6a6a6;
+      }
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+  }
+
+  .ad-filter-btn {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border: none;
+    background: #fff;
+    border-radius: 8px;
+    filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.08));
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #585858;
+
+    img {
+      width: 12.257px;
+      height: 14px;
+    }
+  }
+
+  // ---------- tables ----------
+  .ad-table {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .ad-table-row {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+  }
+
+  .ad-table-head {
+    background: #027fa3;
+    align-items: stretch;
+  }
+
+  .ad-th {
+    flex: 1 0 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 12px;
+    border: none;
+    border-right: 0.5px solid #fff;
+    background: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: left;
+    cursor: pointer;
+
+    img {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+  }
+
+  .ad-table-body .ad-table-row {
+    height: 45px;
+    border-top: 1px solid #e4e4e4;
+  }
+
+  .ad-td {
+    flex: 1 0 0;
+    min-width: 0;
+    padding: 16px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #626262;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ad-empty {
+    padding: 16px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #626262;
+    border-top: 1px solid #e4e4e4;
+  }
+
+  // ---------- white section (Patient Engagement / Most Watched) ----------
+  .ad-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  // Figma: 3 cards per row (331px each, 8px/16px gap). Columns shrink if the content area is narrower.
+  .ad-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 331px));
+    gap: 8px 16px;
+    border-radius: 8px;
+
+    &.ad-card-grid--info {
+      grid-template-columns: repeat(3, minmax(0, 341px));
+    }
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    @media (max-width: 575px) {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+  }
+
+  .ad-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 14px 0 rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+
+    &.ad-card--metric {
+      border-left: 5px solid #dc8535;
+    }
+
+    &.ad-card--video {
+      border: 0.5px solid #027fa3;
+
+      img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+      }
+    }
+
+    &.ad-card--info {
+      height: 74px;
+      border-left: 5px solid #dc8535;
+    }
+  }
+
+  .ad-card-text {
+    flex: 1 0 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: capitalize;
+  }
+
+  .ad-card-label {
+    flex: 1 0 0;
+    min-width: 0;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .ad-card-value {
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #04470c;
+    white-space: nowrap;
+  }
+
+  .ad-loading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #626262;
+  }
+}
