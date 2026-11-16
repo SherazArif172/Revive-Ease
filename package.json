@@ -15,12 +15,13 @@
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@mui/icons-material": "^6.1.6",
-    "@mui/lab": "^6.0.0-beta.14",
-    "@mui/material": "^6.1.6",
+    "@mui/icons-material": "^6.5.0",
+    "@mui/lab": "6.0.1-beta.36",
+    "@mui/material": "^6.5.0",
     "@reduxjs/toolkit": "^2.5.0",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "browser-image-compression": "^2.0.2",
@@ -43,7 +44,6 @@
     "react-clipboardjs-copy": "^2.1.0",
     "react-csv": "^2.2.2",
     "react-data-table-component": "^7.6.2",
-    "react-date-range": "^2.0.1",
     "react-datepicker": "^7.5.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.4.0",
@@ -104,5 +104,11 @@
     "webpack": "^5.99.8",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
+  },
+  "overrides": {
+    "react-avatar-edit": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
